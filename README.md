@@ -163,6 +163,11 @@ NeuralRetail/
 └── README.md
 
 ---
+Live API:
+https://neuralretail-api-f1g9.onrender.com
+
+API Documentation:
+https://neuralretail-api-f1g9.onrender.com/docs
 
 ## Future Improvements
 
