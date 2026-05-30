@@ -1,108 +1,144 @@
 # 🛒 NeuralRetail Analytics Platform
 
-## Overview
+## 🚀 Overview
 
-NeuralRetail is an AI-powered retail analytics platform developed using the Online Retail II dataset.
+NeuralRetail Analytics Platform is an end-to-end AI-powered retail analytics solution developed using the Online Retail II dataset. The platform combines customer intelligence, machine learning, time-series forecasting, and interactive business analytics to help retail organizations make data-driven decisions.
 
-The platform provides:
+The platform enables businesses to:
 
-* Customer Segmentation using RFM Analysis and K-Means Clustering
-* Customer Churn Prediction using XGBoost
-* Demand Forecasting using Prophet
-* Interactive Business Dashboard using Streamlit
-
-The objective is to help retail businesses understand customer behavior, identify churn risks, and forecast future demand.
-
----
-
-## Features
-
-### Customer Segmentation
-
-Customers are segmented into:
-
-* VIP Customers
-* Loyal Customers
-* New Customers
-* Lost Customers
-
-Segmentation is performed using:
-
-* Recency
-* Frequency
-* Monetary Value (RFM)
-
-and K-Means clustering.
+* Identify high-value customers
+* Predict customer churn
+* Forecast future sales and demand
+* Visualize business insights through an interactive dashboard
+* Access machine learning models through REST APIs
 
 ---
 
-### Churn Prediction
+## 🌟 Key Features
 
-A churn prediction model was developed using:
+### 👥 Customer Segmentation
+
+Implemented RFM (Recency, Frequency, Monetary) Analysis and K-Means Clustering to classify customers into meaningful business segments:
+
+* ⭐ VIP Customers
+* 🤝 Loyal Customers
+* 🆕 New Customers
+* ⚠️ Lost Customers
+
+**Business Value:**
+
+* Personalized marketing campaigns
+* Improved customer retention
+* Revenue optimization
+
+---
+
+### 📉 Customer Churn Prediction
+
+Built a machine learning model to identify customers likely to stop purchasing.
+
+**Features Used**
 
 * Recency
 * Frequency
 * Monetary Value
-* Cluster Information
+* Customer Cluster
 
-Algorithm:
+**Algorithm**
 
 * XGBoost Classifier
 
-Performance:
+**Model Performance**
 
-* Accuracy: 99.54%
-* Precision: 99.65%
-* Recall: 98.95%
-* F1 Score: 99.30%
-
----
-
-### Demand Forecasting
-
-Future revenue demand is forecasted using:
-
-* Prophet Time Series Forecasting
-
-Evaluation Metrics:
-
-* MAE: 23907.40
-* RMSE: 27086.51
-* MAPE: 66.16%
+| Metric    | Score  |
+| --------- | ------ |
+| Accuracy  | 99.54% |
+| Precision | 99.65% |
+| Recall    | 98.95% |
+| F1 Score  | 99.30% |
 
 ---
 
-### Dashboard
+### 📈 Demand Forecasting
 
-Interactive Streamlit Dashboard includes:
+Implemented time-series forecasting using Prophet to predict future revenue trends.
+
+**Algorithm**
+
+* Prophet Forecasting Model
+
+**Evaluation Metrics**
+
+| Metric | Value     |
+| ------ | --------- |
+| MAE    | 23,907.40 |
+| RMSE   | 27,086.51 |
+| MAPE   | 66.16%    |
+
+**Business Value**
+
+* Inventory planning
+* Revenue forecasting
+* Demand estimation
+
+---
+
+### 📊 Interactive Analytics Dashboard
+
+Developed a Streamlit dashboard for business users.
+
+Dashboard Modules:
 
 * Executive KPI Overview
 * Customer Segmentation Analysis
 * Churn Analysis
 * Demand Forecasting Insights
+* Revenue Analytics
 
 ---
 
-## Dataset
+## 🌐 Live Deployment
 
-Dataset Used:
+### Dashboard
 
-Online Retail II Dataset
+https://neuralretail-analytics.streamlit.app/
 
-Columns:
+### FastAPI Backend
 
-* Invoice
-* StockCode
-* Description
-* Quantity
-* InvoiceDate
-* Price
-* Customer ID
-* Country
+https://neuralretail-api-f1g9.onrender.com
+
+### API Documentation
+
+https://neuralretail-api-f1g9.onrender.com/docs
+
+### GitHub Repository
+
+https://github.com/rajh39045/NeuralRetail
 
 ---
 
-## Tech Stack
+## 🗂 Dataset Information
+
+**Dataset:** Online Retail II Dataset
+
+**Total Records:** 500,000+ Transactions
+
+### Features
+
+| Column      |
+| ----------- |
+| Invoice     |
+| StockCode   |
+| Description |
+| Quantity    |
+| InvoiceDate |
+| Price       |
+| Customer ID |
+| Country     |
+
+---
+
+## 🛠 Technology Stack
 
 ### Programming Language
 
@@ -113,7 +149,7 @@ Columns:
 * Pandas
 * NumPy
 
-### Visualization
+### Data Visualization
 
 * Matplotlib
 * Seaborn
@@ -124,64 +160,103 @@ Columns:
 * Scikit-Learn
 * XGBoost
 
-### Forecasting
+### Time Series Forecasting
 
 * Prophet
+
+### Backend Development
+
+* FastAPI
+* Uvicorn
 
 ### Dashboard
 
 * Streamlit
 
+### Deployment
+
+* Render
+* Streamlit Community Cloud
+
 ---
 
-## Project Structure
+## 🏗 Project Architecture
 
+```text
+Online Retail II Dataset
+            │
+            ▼
+      Data Cleaning
+            │
+            ▼
+     Feature Engineering
+        (RFM Analysis)
+            │
+ ┌──────────┼──────────┐
+ │          │          │
+ ▼          ▼          ▼
+Customer   Churn    Demand
+Segment.  Prediction Forecasting
+ │          │          │
+ └──────────┼──────────┘
+            ▼
+         FastAPI
+            ▼
+      Streamlit Dashboard
+            ▼
+      Business Insights
+```
+
+---
+
+## 📁 Project Structure
+
+```text
 NeuralRetail/
-
+│
+├── api/
 ├── dashboard/
-
 ├── data/
-
 │   ├── raw/
-
 │   ├── processed/
-
 │   └── features/
-
+│
+├── docs/
 ├── models/
-
-│   ├── churn/
-
-│   └── forecasting/
-
 ├── notebooks/
-
 ├── reports/
-
 ├── src/
-
-└── README.md
+│
+├── requirements.txt
+├── README.md
+├── render.yaml
+└── runtime.txt
+```
 
 ---
-Live API:
-https://neuralretail-api-f1g9.onrender.com
 
-API Documentation:
-https://neuralretail-api-f1g9.onrender.com/docs
-
-## Future Improvements
+## 🔮 Future Enhancements
 
 * Real-Time Forecasting
-* Inventory Optimization
+* Inventory Optimization System
 * MLflow Experiment Tracking
-* FastAPI Deployment
-* Model Monitoring
+* Automated Model Retraining
 * Drift Detection
+* Recommendation Engine
+* Docker Containerization
+* CI/CD Integration
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Harsh Raj
+**Abhishek Kumar**
 
 Computer Science & Engineering
+
+### Connect
+
+* GitHub: https://github.com/rajh39045
+
+---
+
