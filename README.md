@@ -250,7 +250,7 @@ NeuralRetail/
 
 ## 👨‍💻 Author
 
-**Abhishek Kumar**
+**Harsh Raj**
 
 Computer Science & Engineering
 
